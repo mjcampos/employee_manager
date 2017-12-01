@@ -6,12 +6,12 @@ const INITIAL_STATE = {
 	shift: ''
 };
 
-export default (state=INITIAL_STATE, action) => {
+export default (state = INITIAL_STATE, action) => {
 	switch(action.type) {
 		case EMPLOYEE_UPDATE:
 			return {
 				...state,
-				[action.payload.prop] = action.payload.value
+				[action.payload.prop]: action.payload.value
 			};
 		default:
 			return state;
