@@ -17,7 +17,7 @@ export const passwordChanged = password => {
 }
 
 export const loginUserSuccess = user => {
-	Actions.employeeList();
+	Actions.main();
 
 	return {
 		type: LOGIN_USER_SUCCESS,
