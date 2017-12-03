@@ -37,3 +37,11 @@ export const employeeFetch = () => dispatch => {
 			dispatch(employeeFetchSuccess(snapshot.val()));
 		});
 }
+
+export const employeeSave = ({name, phone, shift, uid}) => dispatch => {
+	var {currentUser} = firebase.auth();
+
+	firebase.database().ref(`/users/${currentUser.uid}/employees/${uid}`)
+		.set({name, phone, shift})
+		.then(() => console.log("Saved!"));
+}
