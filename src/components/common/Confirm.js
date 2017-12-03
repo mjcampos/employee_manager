@@ -35,7 +35,7 @@ const styles = {
 		flex: 1,
 		fontSize: 18,
 		textAlign: 'center',
-		line: 40
+		lineHeight: 40
 	},
 	containerStyle: {
 		backgroundColor: 'rgba(0, 0, 0, 0.75)',
